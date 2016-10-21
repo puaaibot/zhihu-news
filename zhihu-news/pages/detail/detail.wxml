@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="news-header">
+    <image src="{{news.image}}" class="news-img"/>
+    <view class="news-title">{{news.title}}</view>
+    <view class="news-source">{{news.image_source}}</view>
+  </view>
+  <view class="news-content">
+    {{news.body}}
+  </view> 
+</view>

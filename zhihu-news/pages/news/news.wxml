@@ -1,0 +1,13 @@
+<view class="news-list-wrapper container">
+  <view class="news-card-wrapper">
+    <navigator url="../detail/detail?id={{news.id}}" class="news-card" wx:for="{{newsList}}" wx:for-item="news">
+      <view class="news-title-wrapper">
+        <text class="news-title">{{news.title}}</text>
+      </view>
+      <view class="news-img-wrapper">
+        <image class="news-img" src="{{news.images[0]}}"></image>
+      </view>
+    </navigator>
+  </view>
+  <text>End</text>
+</view>

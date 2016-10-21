@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/news/news",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "知乎日报",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "images/home-default.png",
+      "selectedIconPath": "images/home-selected.png",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/news/news",
+      "iconPath": "images/laugh-default.png",
+      "selectedIconPath": "images/laugh-selected.png",
+      "text": "知乎日报"
+    }],
+    "color": "#999",
+    "selectedColor": "#3684CC",
+    "backgroundColor": "#fff"
+  }
+}
