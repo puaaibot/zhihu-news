@@ -1,13 +1,24 @@
-<view class="news-list-wrapper container">
-  <view class="news-card-wrapper">
-    <navigator url="../detail/detail?id={{news.id}}" class="news-card" wx:for="{{newsList}}" wx:for-item="news">
-      <view class="news-title-wrapper">
-        <text class="news-title">{{news.title}}</text>
-      </view>
-      <view class="news-img-wrapper">
-        <image class="news-img" src="{{news.images[0]}}"></image>
-      </view>
-    </navigator>
+<scroll-view class="main-wrapper" style="height: {{scrollHeight}}px;" bindscrolltolower="lower" scroll-y="true" lower-threshold="0">
+  <view class="news-list-wrapper container">
+    <view class="news-card-wrapper">
+      <navigator url="../detail/detail?id={{news.id}}" class="news-card" wx:for="{{newsList}}" wx:for-item="news">
+        <view class="news-title-wrapper">
+          <text class="news-title">{{news.title}}</text>
+        </view>
+        <view class="news-img-wrapper">
+          <image class="news-img" src="{{news.images[0]}}"></image>
+        </view>
+      </navigator>
+    </view>
   </view>
-  <text>End</text>
-</view>
+</scroll-view>
+
+<!-- 加载中提示框 -->
+<loading hidden="{{loadingHidden}}">
+  加载中...
+</loading>
+
+<!-- 错误提示框 -->
+<modal hidden="{{modalHidden}}" no-cancel bindconfirm="modalConfirm">
+  发生未知错误 x_x
+</modal>
