@@ -5,7 +5,6 @@ Page({
   // 获取笑话详细内容
   onLoad (options) {
     var that = this
-    console.log('fuckyou')
     wx.request({
       url: 'http://news.at.zhihu.com/api/4/news/' + options.id,
       headers: {
