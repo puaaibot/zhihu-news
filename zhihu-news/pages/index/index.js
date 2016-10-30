@@ -3,7 +3,7 @@
 var app = getApp()
 Page({
   data: {
-    motto: 'Fuck kwok',
+    motto: 'Big dick',
     userInfo: {}
   },
   onLoad: function () {

@@ -1,11 +1,10 @@
 Page({
   data: {
     newsList: [],
-    scrollHeight: 0,
     loadingHidden: true,
     modalHidden: true
   },
-  lower: function (e) {
+  onReachBottom: function (e) {
     this.setData({loadingHidden: false})
     loadMore(this)
   },
@@ -15,16 +14,7 @@ Page({
   onLoad: function () {
     this.index = 1
     var that = this
-    // 获取窗口高度
-    wx.getSystemInfo({
-      success: function (resp) {
-        that.setData({scrollHeight: resp.windowHeight})
-      },
-      fail: function () {
-        that.setData({modalHidden: true})
-      }
-    })
-    // 获取笑话列表
+    // 获取新闻列表
     wx.request({
       url: 'http://news.at.zhihu.com/api/4/news/latest',
       header: {
@@ -33,6 +23,9 @@ Page({
       success: function(res) {
         var newsList = res.data.stories
         that.setData({newsList: newsList})
+      },
+      fail: function () {
+        that.setData({modalHidden: true})
       }
     })
   }

@@ -1,0 +1,11 @@
+<view class="main-wrapper">
+  <view class="title">
+    <text>Lucky Day!</text>
+  </view>
+  <view class="silder-wrapper" hidden="{{silderHidden}}">
+    <slider bindchange="sliderChange" min="0" max="100" step="5" value="{{silderValue}}"/>
+  </view>
+  <view hidden="{{jokeHidden}}" class="joke-wrapper">
+    <text>{{joke}}</text>
+  </view>
+</view>
