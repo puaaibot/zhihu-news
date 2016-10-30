@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/news/news",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/lucky/lucky"
   ],
   "window": {
     "backgroundTextStyle":"light",
@@ -21,6 +22,11 @@
       "iconPath": "images/laugh-default.png",
       "selectedIconPath": "images/laugh-selected.png",
       "text": "知乎日报"
+    }, {
+      "pagePath": "pages/lucky/lucky",
+      "iconPath": "images/lucky-default.png",
+      "selectedIconPath": "images/lucky-selected.png",
+      "text": "手气不错"
     }],
     "color": "#999",
     "selectedColor": "#3684CC",
